@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>African Pearl International — Online Admission</title>
+  <style>
+    :root {
+      --primary: #2F5496;
+      --secondary: #FFC000;
+      --text: #333;
+      --bg: #f7f9fb;
+      --input-bg: #fff;
+      --input-border: #ccc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    header img {
+      max-height: 80px;
+      margin-bottom: 0.5rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 0.95rem;
+      color: #e0e0e0;
+    }
+    form {
+      padding: 1.5rem;
+    }
+    form h2 {
+      color: var(--primary);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    label {
+      display: block;
+      margin: 0.8rem 0 0.3rem;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid var(--input-border);
+      border-radius: 4px;
+      background: var(--input-bg);
+      font-size: 1rem;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(47,84,150,0.2);
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      background: var(--secondary);
+      border: none;
+      border-radius: 4px;
+      color: #000;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e0a800;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- Replace the src with your actual logo URL -->
+      <img src="INSERT_YOUR_LOGO_URL_HERE" alt="African Pearl International Logo" />
+      <h1>African Pearl International</h1>
+      <p>
+        Please complete and submit this form online.  
+        Then pay school fees to our bank account as detailed below.
+      </p>
+    </header>
+    <form id="admissionsForm">
+      <!-- Student details -->
+      <label>Full Name</label>
+      <input name="full_name" required />
+
+      <label>Date of Birth</label>
+      <input type="date" name="date_of_birth" required />
+
+      <label>Country of Birth</label>
+      <input name="country_of_birth" required />
+
+      <label>Nationality</label>
+      <input name="nationality" required />
+
+      <label>Mother Tongue</label>
+      <input name="mother_tongue" />
+
+      <label>Meal Preference</label>
+      <select name="meal_preference">
+        <option value="Veg">Veg</option>
+        <option value="Non-Veg">Non-Veg</option>
+      </select>
+
+      <label>Publish Photos? (Yes/No)</label>
+      <select name="publish_photos">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>Home Address</label>
+      <textarea name="home_address" rows="2"></textarea>
+
+      <label>Previous School</label>
+      <input name="previous_school" />
+
+      <label>Last Completed Year/Class</label>
+      <input name="last_completed_year" />
+
+      <!-- Parents -->
+      <h2>Father’s Information</h2>
+      <label>Father Name</label>
+      <input name="father_name" />
+
+      <label>Father Mobile</label>
+      <input name="father_mobile" />
+
+      <label>Father Email</label>
+      <input type="email" name="father_email" />
+
+      <label>Father Occupation</label>
+      <input name="father_occupation" />
+
+      <label>Father Employer</label>
+      <input name="father_employer" />
+
+      <h2>Mother’s Information</h2>
+      <label>Mother Name</label>
+      <input name="mother_name" />
+
+      <label>Mother Mobile</label>
+      <input name="mother_mobile" />
+
+      <label>Mother Email</label>
+      <input type="email" name="mother_email" />
+
+      <label>Mother Address</label>
+      <input name="mother_address" />
+
+      <label>Mother Occupation</label>
+      <input name="mother_occupation" />
+
+      <label>Mother Employer</label>
+      <input name="mother_employer" />
+
+      <h2>Guardian’s Information (if applicable)</h2>
+      <label>Guardian Name</label>
+      <input name="guardian_name" />
+
+      <label>Guardian Relation</label>
+      <input name="guardian_relation" />
+
+      <label>Guardian Mobile</label>
+      <input name="guardian_mobile" />
+
+      <label>Guardian Email</label>
+      <input type="email" name="guardian_email" />
+
+      <label>Guardian Occupation</label>
+      <input name="guardian_occupation" />
+
+      <h2>Emergency Contacts</h2>
+      <label>Emergency #1 Name</label>
+      <input name="emergency1_name" />
+
+      <label>Emergency #1 Tel</label>
+      <input name="emergency1_tel" />
+
+      <label>Emergency #1 Relation</label>
+      <input name="emergency1_relation" />
+
+      <label>Emergency #2 Name</label>
+      <input name="emergency2_name" />
+
+      <label>Emergency #2 Tel</label>
+      <input name="emergency2_tel" />
+
+      <label>Emergency #2 Relation</label>
+      <input name="emergency2_relation" />
+
+      <h2>Additional Details</h2>
+      <label>Siblings at APS? (Yes/No)</label>
+      <select name="siblings_at_aps">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>Siblings Details</label>
+      <textarea name="siblings_details" rows="1"></textarea>
+
+      <label>Passport Photo (jpg, png, gif)</label>
+      <input type="file" name="passport_photo" accept="image/*" required />
+
+      <label>Report Card (PDF)</label>
+      <input type="file" name="report_card" accept="application/pdf" required />
+
+      <label>Immunization Card (jpg, png, gif, pdf)</label>
+      <input type="file" name="immunization_card" accept="image/*,application/pdf" />
+
+      <label>Birth Certificate/Passport Copy (jpg, png, gif, pdf)</label>
+      <input type="file" name="birth_cert" accept="image/*,application/pdf" />
+
+      <label>Allergies? (Yes/No)</label>
+      <select name="allergies">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>Allergy Details</label>
+      <textarea name="allergy_details" rows="1"></textarea>
+
+      <label>Medication? (Yes/No)</label>
+      <select name="medication">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+
+      <label>Medication Details</label>
+      <textarea name="medication_details" rows="1"></textarea>
+
+      <label>OK to Give Paracetamol? (Yes/No)</label>
+      <select name="ok_to_give_paracetamol">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Immunized Tetanus? (Yes/No)</label>
+      <select name="immunized_tetanus">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Polio? (Yes/No)</label>
+      <select name="immunized_polio">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Measles? (Yes/No)</label>
+      <select name="immunized_measles">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>TB? (Yes/No)</label>
+      <select name="immunized_tb">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Other Immunized</label>
+      <input name="immunized_others" />
+
+      <label>Dietary Requirements? (Yes/No)</label>
+      <select name="dietary_requirements">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Dietary Details</label>
+      <textarea name="dietary_details" rows="1"></textarea>
+
+      <label>Alt Contact #1 Name</label>
+      <input name="alt_contact1_name" />
+
+      <label>Alt Contact #1 Tel</label>
+      <input name="alt_contact1_tel" />
+
+      <label>Alt Contact #1 Relation</label>
+      <input name="alt_contact1_relation" />
+
+      <label>Alt Contact #2 Name</label>
+      <input name="alt_contact2_name" />
+
+      <label>Alt Contact #2 Tel</label>
+      <input name="alt_contact2_tel" />
+
+      <label>Alt Contact #2 Relation</label>
+      <input name="alt_contact2_relation" />
+
+      <label>Other Conditions? (Yes/No)</label>
+      <select name="other_conditions">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Other Conditions Details</label>
+      <textarea name="other_conditions_details" rows="1"></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+    <!-- …your form markup above… -->
+
+  <script>
+  const webhookUrl = 'http://localhost:3000/admissions';
+
+  document
+    .getElementById('admissionsForm')
+    .addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+
+      try {
+        const res = await fetch(webhookUrl, {
+          method: 'POST',
+          // NO Content-Type header — browser will set multipart/form-data for you
+          body: formData,
+        });
+        if (!res.ok) throw new Error(await res.text());
+        alert('Application submitted successfully!');
+        e.target.reset();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    });
+</script>
+
+
+</body>
+</html>
+
+
+</body>
+</html>
