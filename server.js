@@ -81,6 +81,7 @@ app.post('/admissions', cpUpload, async (req, res) => {
   body.father_name,
   body.father_mobile,
   body.father_email,
+  body.father_address,
   body.father_occupation,
   body.father_employer,
   body.mother_name,
