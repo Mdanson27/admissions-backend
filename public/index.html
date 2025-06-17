@@ -348,6 +348,33 @@
     });
 </script>
 
+<script>
+function setupYesNoAutoDetails(selectName, detailsName) {
+  const select = document.querySelector(`[name="${selectName}"]`);
+  const details = document.querySelector(`[name="${detailsName}"]`);
+  function update() {
+    if (select.value.toLowerCase() === "no") {
+      details.value = "No";
+      details.readOnly = true;
+      details.style.background = "#eee";
+    } else {
+      details.value = "";
+      details.readOnly = false;
+      details.style.background = "";
+    }
+  }
+  select.addEventListener('change', update);
+  update(); // Run once at start
+}
+
+// Run for all relevant pairs
+setupYesNoAutoDetails("siblings_at_aps", "siblings_details");
+setupYesNoAutoDetails("allergies", "allergy_details");
+setupYesNoAutoDetails("medication", "medication_details");
+setupYesNoAutoDetails("dietary_requirements", "dietary_details");
+</script>
+
+
 
 </body>
 </html>
