@@ -147,7 +147,7 @@ if (siblingsAtAPS === "no") {
   body.alt_contact2_name,
   body.alt_contact2_tel,
   body.alt_contact2_relation,
-  body.other_conditions,
+  body.other_conditions_details,
     "Pending",    // <-- Fills "Payment Status"
   "Processed"   // <-- Fills "Processed"
 ];
