@@ -67,6 +67,28 @@ app.post('/admissions', cpUpload, async (req, res) => {
 
     // 2. Prepare the row for Google Sheet
     const body = req.body;
+    let allergies = body.allergies ? body.allergies.toLowerCase() : "";
+if (allergies === "none" || allergies === "no") {
+  body.allergy_details = "No";
+}
+
+// Dietary Requirements auto-fill logic
+let dietaryReq = body.dietary_requirements ? body.dietary_requirements.toLowerCase() : "";
+if (dietaryReq === "no") {
+  body.dietary_details = "No";
+}
+
+// Medication auto-fill logic
+let medication = body.medication ? body.medication.toLowerCase() : "";
+if (medication === "no") {
+  body.medication_details = "No";
+}
+
+// Siblings at APS auto-fill logic
+let siblingsAtAPS = body.siblings_at_aps ? body.siblings_at_aps.toLowerCase() : "";
+if (siblingsAtAPS === "no") {
+  body.siblings_details = "No";
+}
     const row = [
   body.full_name,
   body.date_of_birth,
