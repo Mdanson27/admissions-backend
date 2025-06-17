@@ -92,9 +92,9 @@ app.post('/admissions', cpUpload, async (req, res) => {
   body.mother_employer,
   body.guardian_name,
   body.guardian_relation,
+  body.guardian_occupation,
   body.guardian_mobile,
   body.guardian_email,
-  body.guardian_occupation,
   body.emergency1_name,
   body.emergency1_tel,
   body.emergency1_relation,
@@ -126,8 +126,7 @@ app.post('/admissions', cpUpload, async (req, res) => {
   body.alt_contact2_tel,
   body.alt_contact2_relation,
   body.other_conditions,
-  body.other_conditions_details,
-  "Pending",    // <-- Fills "Payment Status"
+    "Pending",    // <-- Fills "Payment Status"
   "Processed"   // <-- Fills "Processed"
 ];
 
