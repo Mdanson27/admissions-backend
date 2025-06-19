@@ -97,9 +97,8 @@ app.post('/admissions', cpUpload, async (req, res) => {
     // 3. The row: add classApplied after full_name
     const row = [
       body.full_name,
-      body.classApplied, // New field
-      body.studentType,
       body.gender,
+      body.studentType,
       body.date_of_birth,
       body.country_of_birth,
       body.nationality,
