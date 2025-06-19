@@ -107,6 +107,15 @@
       <label>Full Name</label>
       <input name="full_name" required />
 
+      <label for="gender">Gender</label>
+<select name="gender" id="gender" required>
+  <option value="">Select Gender</option>
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+  <option value="Other">Other</option>
+</select>
+
+
       <!-- New field: Class Applying For -->
       <label for="classApplied">Class Applying For</label>
       <select name="classApplied" id="classApplied" required>
@@ -119,6 +128,14 @@
         <option value="Grade 6">Grade 6</option>
         <!-- Add more as needed -->
       </select>
+
+      <label for="studentType">Day / Boarding</label>
+<select name="studentType" id="studentType" required>
+  <option value="">Select Option</option>
+  <option value="Day">Day</option>
+  <option value="Boarding">Boarding</option>
+</select>
+
 
       <label>Date of Birth</label>
       <input type="date" name="date_of_birth" required />

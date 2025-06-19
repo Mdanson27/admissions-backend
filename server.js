@@ -98,6 +98,8 @@ app.post('/admissions', cpUpload, async (req, res) => {
     const row = [
       body.full_name,
       body.classApplied, // New field
+      body.studentType,
+      body.gender,
       body.date_of_birth,
       body.country_of_birth,
       body.nationality,
