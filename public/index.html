@@ -107,6 +107,19 @@
       <label>Full Name</label>
       <input name="full_name" required />
 
+      <!-- New field: Class Applying For -->
+      <label for="classApplied">Class Applying For</label>
+      <select name="classApplied" id="classApplied" required>
+        <option value="">Select Class</option>
+        <option value="Grade 1">Grade 1</option>
+        <option value="Grade 2">Grade 2</option>
+        <option value="Grade 3">Grade 3</option>
+        <option value="Grade 4">Grade 4</option>
+        <option value="Grade 5">Grade 5</option>
+        <option value="Grade 6">Grade 6</option>
+        <!-- Add more as needed -->
+      </select>
+
       <label>Date of Birth</label>
       <input type="date" name="date_of_birth" required />
 
@@ -321,11 +334,8 @@
     </form>
   </div>
 
-    <!-- …your form markup above… -->
-
   <script>
   const webhookUrl = 'https://admissions-backend-iv1b.onrender.com/admissions';
-
 
   document
     .getElementById('admissionsForm')
@@ -336,7 +346,6 @@
       try {
         const res = await fetch(webhookUrl, {
           method: 'POST',
-          // NO Content-Type header — browser will set multipart/form-data for you
           body: formData,
         });
         if (!res.ok) throw new Error(await res.text());
@@ -346,39 +355,31 @@
         alert('Error: ' + err.message);
       }
     });
-</script>
+  </script>
 
-<script>
-function setupYesNoAutoDetails(selectName, detailsName) {
-  const select = document.querySelector(`[name="${selectName}"]`);
-  const details = document.querySelector(`[name="${detailsName}"]`);
-  function update() {
-    if (select.value.toLowerCase() === "no") {
-      details.value = "No";
-      details.readOnly = true;
-      details.style.background = "#eee";
-    } else {
-      details.value = "";
-      details.readOnly = false;
-      details.style.background = "";
+  <script>
+  function setupYesNoAutoDetails(selectName, detailsName) {
+    const select = document.querySelector(`[name="${selectName}"]`);
+    const details = document.querySelector(`[name="${detailsName}"]`);
+    function update() {
+      if (select.value.toLowerCase() === "no") {
+        details.value = "No";
+        details.readOnly = true;
+        details.style.background = "#eee";
+      } else {
+        details.value = "";
+        details.readOnly = false;
+        details.style.background = "";
+      }
     }
+    select.addEventListener('change', update);
+    update();
   }
-  select.addEventListener('change', update);
-  update(); // Run once at start
-}
 
-// Run for all relevant pairs
-setupYesNoAutoDetails("siblings_at_aps", "siblings_details");
-setupYesNoAutoDetails("allergies", "allergy_details");
-setupYesNoAutoDetails("medication", "medication_details");
-setupYesNoAutoDetails("dietary_requirements", "dietary_details");
-</script>
-
-
-
-</body>
-</html>
-
-
+  setupYesNoAutoDetails("siblings_at_aps", "siblings_details");
+  setupYesNoAutoDetails("allergies", "allergy_details");
+  setupYesNoAutoDetails("medication", "medication_details");
+  setupYesNoAutoDetails("dietary_requirements", "dietary_details");
+  </script>
 </body>
 </html>
